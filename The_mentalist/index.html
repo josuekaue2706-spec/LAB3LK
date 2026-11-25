@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O Mentalista | Arquivos Confidenciais</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #101010;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        /* MENU */
+
+        header {
+            background: #080808;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #9b773e;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #c9a45c;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #c9a45c;
+        }
+
+        /* INÍCIO */
+
+        .hero {
+            min-height: 570px;
+            padding: 100px 8%;
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(90deg, #101010 20%, #101010cc 65%, #10101088),
+                url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1600&q=85");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-conteudo {
+            max-width: 650px;
+        }
+
+        .etiqueta {
+            color: #c9a45c;
+            letter-spacing: 4px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 65px;
+            margin: 20px 0;
+            letter-spacing: 3px;
+        }
+
+        h1 span {
+            color: #c9a45c;
+        }
+
+        .hero p {
+            color: #ccc;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 15px 28px;
+            background: #c9a45c;
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: .3s;
+        }
+
+        .botao:hover {
+            background: #e3c47d;
+            transform: translateY(-3px);
+        }
+
+        /* SEÇÕES */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .titulo h2 {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .titulo span {
+            color: #c9a45c;
+        }
+
+        .titulo p {
+            color: #999;
+        }
+
+        /* SINOPSE */
+
+        .sinopse {
+            background: #171717;
+            text-align: center;
+        }
+
+        .texto-sinopse {
+            max-width: 850px;
+            margin: auto;
+            color: #ccc;
+            font-size: 18px;
+            line-height: 2;
+        }
+
+        /* PERSONAGENS */
+
+        .personagens {
+            background: #101010;
+        }
+
+        .cartoes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .cartao {
+            background: #1b1b1b;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 30px;
+            transition: .3s;
+        }
+
+        .cartao:hover {
+            transform: translateY(-7px);
+            border-color: #c9a45c;
+        }
+
+        .cartao h3 {
+            color: #c9a45c;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .cartao p {
+            color: #aaa;
+            line-height: 1.7;
+        }
+
+        .numero {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        /* CURIOSIDADES */
+
+        .curiosidades {
+            background: #191919;
+        }
+
+        .curiosidades ul {
+            max-width: 750px;
+            margin: auto;
+            list-style: none;
+        }
+
+        .curiosidades li {
+            padding: 20px;
+            margin-bottom: 15px;
+            background: #242424;
+            border-left: 4px solid #c9a45c;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* FRASE */
+
+        .frase {
+            text-align: center;
+            background: #292116;
+            padding: 75px 8%;
+        }
+
+        .frase h2 {
+            color: #c9a45c;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .frase p {
+            color: #ddd;
+            font-style: italic;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #080808;
+            padding: 30px;
+            text-align: center;
+            color: #777;
+        }
+
+        footer span {
+            color: #c9a45c;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .hero {
+                padding: 80px 6%;
+            }
+
+            .cartoes {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <header>
+
+        <div class="logo">
+            THE <span>MENTALIST</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">A série</a>
+            <a href="#personagens">Personagens</a>
+            <a href="#curiosidades">Curiosidades</a>
+        </nav>
+
+    </header>
+
+
+    <!-- INÍCIO -->
+
+    <main>
+
+        <div class="hero" id="inicio">
+
+            <div class="hero-conteudo">
+
+                <p class="etiqueta">
+                    ARQUIVOS CONFIDENCIAIS
+                </p>
+
+                <h1>
+                    O <span>MENTALISTA</span>
+                </h1>
+
+                <p>
+                    Observe os detalhes. Analise os comportamentos.
+                    Descubra aquilo que ninguém consegue enxergar.
+
+                    Entre no universo de Patrick Jane,
+                    um homem com habilidades extraordinárias
+                    de observação e dedução.
+                </p>
+
+                <a href="#sobre" class="botao">
+                    DESCUBRA A SÉRIE
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SOBRE -->
+
+        <section class="sinopse" id="sobre">
+
+            <div class="titulo">
+
+                <h2>SOBRE <span>A SÉRIE</span></h2>
+
+                <p>Uma mente brilhante. Um passado misterioso.</p>
+
+            </div>
+
+            <p class="texto-sinopse">
+
+                O Mentalista acompanha Patrick Jane,
+                um consultor independente que trabalha
+                com a equipe de investigação do CBI.
+
+                Utilizando sua capacidade de observação,
+                leitura de comportamento e dedução,
+                ele ajuda a solucionar crimes complexos.
+
+                Entretanto, sua verdadeira motivação
+                está relacionada a um acontecimento
+                marcante de seu passado.
+
+            </p>
+
+        </section>
+
+
+        <!-- PERSONAGENS -->
+
+        <section class="personagens" id="personagens">
+
+            <div class="titulo">
+
+                <h2>PERSONAGENS <span>PRINCIPAIS</span></h2>
+
+                <p>Conheça as mentes por trás das investigações.</p>
+
+            </div>
+
+            <div class="cartoes">
+
+                <div class="cartao">
+
+                    <div class="numero">🧠</div>
+
+                    <h3>Patrick Jane</h3>
+
+                    <p>
+                        Consultor do CBI conhecido por sua
+                        inteligência, observação e capacidade
+                        de perceber detalhes ignorados
+                        por outras pessoas.
+                    </p>
+
+                </div>
+
+
+                <div class="cartao">
+
+                    <div class="numero">🔎</div>
+
+                    <h3>Teresa Lisbon</h3>
+
+                    <p>
+                        Líder da equipe de investigação.
+                        Inteligente, determinada e responsável
+                        por conduzir os casos.
+                    </p>
+
+                </div>
+
+
+                <div class="cartao">
+
+                    <div class="numero">🎯</div>
+
+                    <h3>Kimball Cho</h3>
+
+                    <p>
+                        Agente conhecido por sua postura
+                        séria, disciplina e capacidade
+                        investigativa.
+                    </p>
+
+                </div>
+
+
+                <div class="cartao">
+
+                    <div class="numero">🕵️</div>
+
+                    <h3>Wayne Rigsby</h3>
+
+                    <p>
+                        Agente dedicado, com experiência
+                        em investigações e trabalho em equipe.
+                    </p>
+
+                </div>
+
+
+                <div class="cartao">
+
+                    <div class="numero">💻</div>
+
+                    <h3>Grace Van Pelt</h3>
+
+                    <p>
+                        Agente inteligente que contribui
+                        com conhecimentos tecnológicos
+                        e investigativos.
+                    </p>
+
+                </div>
+
+
+                <div class="cartao">
+
+                    <div class="numero">♟️</div>
+
+                    <h3>Red John</h3>
+
+                    <p>
+                        Uma figura misteriosa ligada
+                        ao passado de Patrick Jane
+                        e ao grande mistério da série.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CURIOSIDADES -->
+
+        <section class="curiosidades" id="curiosidades">
+
+            <div class="titulo">
+
+                <h2>VOCÊ <span>SABIA?</span></h2>
+
+                <p>Algumas informações sobre a produção.</p>
+
+            </div>
+
+            <ul>
+
+                <li>
+                    📺 A série estreou em 2008.
+                </li>
+
+                <li>
+                    🎬 A produção possui 7 temporadas.
+                </li>
+
+                <li>
+                    🧠 Patrick Jane é conhecido por
+                    sua habilidade de observação.
+                </li>
+
+                <li>
+                    🔍 A série mistura investigação criminal,
+                    mistério e drama.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- FRASE -->
+
+        <section class="frase">
+
+            <h2>O segredo está nos detalhes.</h2>
+
+            <p>
+                Nem tudo é o que parece.
+                Basta aprender a observar.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            Projeto de fã inspirado em
+            <span>O Mentalista</span>.
+        </p>
+
+        <p>
+            Site independente e não oficial.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
