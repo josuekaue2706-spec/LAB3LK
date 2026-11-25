@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlocoCraft | Minecraft</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #101a17;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #0b120f;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #75c843;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #b9c8ba;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #75c843;
+        }
+
+        .hero {
+            min-height: 500px;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            background: linear-gradient(135deg, #17291f, #284a31);
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin: 20px 0;
+        }
+
+        .hero h1 span {
+            color: #75c843;
+        }
+
+        .hero p {
+            color: #c4d0c5;
+            line-height: 1.7;
+            max-width: 450px;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 25px;
+            background: #75c843;
+            color: #101a17;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background: #91e35d;
+        }
+
+        .cena {
+            width: 45%;
+            height: 280px;
+            background: linear-gradient(#77c9e8 58%, #65b84a 58%);
+            border: 5px solid #527d47;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 75px;
+        }
+
+        section {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 35px;
+            margin: 15px 0;
+        }
+
+        .descricao {
+            color: #b9c8ba;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .cartoes {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .cartao {
+            background: #1b2923;
+            border: 1px solid #304536;
+            padding: 30px;
+            border-radius: 12px;
+            flex: 1;
+        }
+
+        .cartao h3 {
+            margin: 15px 0;
+        }
+
+        .cartao p {
+            color: #b9c8ba;
+            line-height: 1.6;
+        }
+
+        .icone {
+            font-size: 40px;
+        }
+
+        .destaque {
+            background: #17251c;
+        }
+
+        .biomas {
+            display: flex;
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .bioma {
+            flex: 1;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .floresta {
+            background: #286b38;
+        }
+
+        .deserto {
+            background: #8a6835;
+        }
+
+        .neve {
+            background: #557b8b;
+        }
+
+        .bioma h3 {
+            margin: 15px 0;
+        }
+
+        .convite {
+            background: #203c29;
+        }
+
+        .ideia {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #0b120f;
+            padding: 30px;
+            text-align: center;
+            color: #b9c8ba;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .cena {
+                width: 100%;
+            }
+
+            .cartoes, .biomas {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">BLOCO<span>CRAFT</span></div>
+
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#dicas">Dicas</a>
+            <a href="#biomas">Biomas</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="hero">
+            <div>
+                <p>EXPLORE • CONSTRUA • SOBREVIVA</p>
+
+                <h1>SUA AVENTURA<br>
+                    <span>COMEÇA AQUI.</span>
+                </h1>
+
+                <p>
+                    Entre em um mundo de possibilidades,
+                    descubra lugares incríveis e construa
+                    tudo o que sua imaginação permitir.
+                </p>
+
+                <a href="#sobre" class="botao">
+                    Explorar o site
+                </a>
+            </div>
+
+            <div class="cena">
+                🌳
+            </div>
+        </div>
+
+        <section id="sobre">
+            <h2>O que é Minecraft?</h2>
+
+            <p class="descricao">
+                Minecraft é um jogo de construção e exploração
+                onde os jogadores usam blocos para criar
+                estruturas, explorar ambientes e viver aventuras.
+            </p>
+
+            <div class="cartoes">
+
+                <div class="cartao">
+                    <div class="icone">⛏️</div>
+                    <h3>Sobrevivência</h3>
+                    <p>Reúna recursos, construa abrigos e sobreviva.</p>
+                </div>
+
+                <div class="cartao">
+                    <div class="icone">🏡</div>
+                    <h3>Construção</h3>
+                    <p>Crie casas, cidades e construções gigantes.</p>
+                </div>
+
+                <div class="cartao">
+                    <div class="icone">🧭</div>
+                    <h3>Exploração</h3>
+                    <p>Descubra cavernas, vilas e novos lugares.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="destaque" id="dicas">
+            <h2>3 dicas para iniciantes</h2>
+
+            <div class="cartoes">
+
+                <div class="cartao">
+                    <h3>01 - Ferramentas</h3>
+                    <p>Comece coletando madeira e criando ferramentas.</p>
+                </div>
+
+                <div class="cartao">
+                    <h3>02 - Abrigo</h3>
+                    <p>Construa um lugar seguro para passar a noite.</p>
+                </div>
+
+                <div class="cartao">
+                    <h3>03 - Exploração</h3>
+                    <p>Leve comida, ferramentas e tochas.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="biomas">
+            <h2>Biomas para explorar</h2>
+
+            <div class="biomas">
+
+                <div class="bioma floresta">
+                    <div class="icone">🌲</div>
+                    <h3>Floresta</h3>
+                    <p>Árvores e recursos naturais.</p>
+                </div>
+
+                <div class="bioma deserto">
+                    <div class="icone">🌵</div>
+                    <h3>Deserto</h3>
+                    <p>Areia, cactos e templos.</p>
+                </div>
+
+                <div class="bioma neve">
+                    <div class="icone">❄️</div>
+                    <h3>Neve</h3>
+                    <p>Montanhas e terrenos gelados.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="convite">
+            <h2>Qual será sua próxima construção?</h2>
+
+            <p>Receba uma ideia aleatória para construir!</p>
+
+            <button class="botao" id="ideiaBtn">
+                Sortear uma ideia
+            </button>
+
+            <p class="ideia" id="ideia">
+                Clique no botão!
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Feito por um fã de Minecraft 💚</p>
+        <p>Projeto independente e não oficial.</p>
+    </footer>
+
+    <script>
+        const ideias = [
+            "Construa uma casa na árvore!",
+            "Crie uma base secreta!",
+            "Construa uma vila!",
+            "Faça uma ponte gigante!",
+            "Construa uma torre!",
+            "Crie uma fazenda automática!"
+        ];
+
+        const botao = document.getElementById("ideiaBtn");
+        const texto = document.getElementById("ideia");
+
+        botao.addEventListener("click", function() {
+            const sorteio = Math.floor(Math.random() * ideias.length);
+
+            texto.textContent = ideias[sorteio];
+        });
+    </script>
+
+</body>
+</html>
